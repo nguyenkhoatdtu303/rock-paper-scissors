@@ -50,5 +50,18 @@ function playRound(humanChoice, computerChoice) {
     }
 } 
 
-playRound(getHumanChoice(), getComputerChoice());
-console.log(humanScore, computerScore);
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());   
+    }
+}
+
+playGame();
+
+if (humanScore > computerScore) {
+    console.log("You win!");
+} else if(humanScore < computerScore) {
+    console.log("You lose!");
+} else {
+    console.log("Draw!");
+}
